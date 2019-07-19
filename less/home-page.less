@@ -1,4 +1,31 @@
+.button(@color, @width) {
+  display: block;
+  background-color: @color;
+  color: white;
+  margin: 0 10px 15px;
+  line-height: 40px;
+  cursor: pointer;
+  width: @width;
+  height: 45px;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+
 .home {
+  
+  .bus {
+    border-top: 2px dashed #ddd;
+  }
+
+  .top-text {
+    padding: 15px 0;
+    font-weight: bold;
+    border-bottom: 2px dashed #ddd;
+
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,11 +33,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
     
-    .text-content {
+    .top-section, .text-content {
       width: 48%;
       padding-right: 1%;
+    }
+
+    .text-content, .content-destination {
+      font-weight: bold;
     }
 
     .img-content {
@@ -45,6 +75,10 @@
     img {
       border-radius: 10px;
     }
+
+    .mid-content {
+      font-weight: bold;
+    }
   }
 
   .content-pick {
@@ -56,6 +90,14 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+    }
+
+    .destination {
+      font-weight: bold;
+    }
+
+    .btn {
+      .button(teal, 200px)
     }
   }
 }// home

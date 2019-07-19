@@ -1,4 +1,37 @@
+.button(@color, @width) {
+  display: block;
+  background-color: @color;
+  color: white;
+  margin: 0 10px 15px;
+  line-height: 40px;
+  cursor: pointer;
+  width: @width;
+  height: 45px;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+
 .home {
+
+  @media @phone {
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px 5px;
+  }
+  
+  .bus {
+    border-top: 2px dashed #ddd;
+  }
+
+  .top-text {
+    padding: 15px 0;
+    font-weight: bold;
+    border-bottom: 2px dashed #ddd;
+
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,16 +39,46 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
     
-    .text-content {
+    @media @phone {
+      .Desktop {
+        display: none;
+      }
+    }
+
+    @media @phone {
+      .mobile {
+        border-radius: 10px;
+      }
+    }
+
+    @media @phone {
+      width: 900px;
+      margin-left: -200px;
+    }
+    
+    .top-section, .text-content {
       width: 48%;
       padding-right: 1%;
+    }
+
+    .text-content, .content-destination {
+      font-weight: bold;
+    }
+
+    @media @phone {
+      flex-direction: column;
+      align-items: center;
+      width: 900px;
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      .mobile {
+        display: none;
+      }
 
       img {
         border-radius: 10px;
@@ -42,8 +105,13 @@
     width: 75%;
     margin: 0 auto 30px;
 
+
     img {
       border-radius: 10px;
+    }
+
+    .mid-content {
+      font-weight: bold;
     }
   }
 
@@ -53,9 +121,33 @@
     display: flex;
     justify-content: space-between;
 
+    @media @phone {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 900px;
+      margin: 90px;
+      
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+    }
+
+    .destination {
+      font-weight: bold;
+    }
+
+    .btn {
+      .button(teal, 200px)
+    }
+
+    @media @phone {
+      .btn {
+        width: 300px;
+        align-content: center;
+      }
     }
   }
 }// home

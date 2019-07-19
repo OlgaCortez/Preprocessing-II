@@ -181,10 +181,22 @@ header div {
   align-content: center;
   align-items: center;
 }
+@media (max-width:500px) {
+  header div {
+    flex-direction: column;
+  }
+}
 header div nav {
   display: flex;
   justify-content: space-between;
   width: 50%;
+}
+@media (max-width:500px) {
+  header div nav {
+    justify-content: space-between;
+    width: 300px;
+    margin: 10px;
+  }
 }
 header div nav a {
   text-decoration: none;
@@ -199,11 +211,23 @@ header div nav a {
   border-top: 2px dashed silver;
   background: #FFEBCD;
 }
+@media (max-width:500px) {
+  .footer {
+    display: flex;
+  }
+}
 .footer p {
   text-align: center;
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+@media (max-width:500px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px 5px;
+  }
 }
 .home .bus {
   border-top: 2px dashed #ddd;
@@ -219,6 +243,22 @@ header div nav a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width:500px) {
+  .home .content-section .Desktop {
+    display: none;
+  }
+}
+@media (max-width:500px) {
+  .home .content-section .mobile {
+    border-radius: 10px;
+  }
+}
+@media (max-width:500px) {
+  .home .content-section {
+    width: 900px;
+    margin-left: -200px;
+  }
+}
 .home .content-section .top-section,
 .home .content-section .text-content {
   width: 48%;
@@ -228,9 +268,19 @@ header div nav a {
 .home .content-section .content-destination {
   font-weight: bold;
 }
+@media (max-width:500px) {
+  .home .content-section {
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+.home .content-section .img-content .mobile {
+  display: none;
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -263,6 +313,15 @@ header div nav a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width:500px) {
+  .home .content-pick {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 900px;
+    margin: 90px;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
@@ -282,4 +341,10 @@ header div nav a {
   font-size: 2rem;
   text-align: center;
   border-radius: 10px;
+}
+@media (max-width:500px) {
+  .home .content-pick .btn {
+    width: 300px;
+    align-content: center;
+  }
 }
